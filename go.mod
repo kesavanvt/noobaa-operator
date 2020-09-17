@@ -3,6 +3,7 @@ module github.com/noobaa/noobaa-operator/v2
 go 1.13
 
 require (
+	cloud.google.com/go/storage v1.3.0
 	github.com/Azure/azure-sdk-for-go v39.2.0+incompatible
 	github.com/Azure/azure-storage-blob-go v0.8.0
 	github.com/Azure/go-autorest/autorest v0.9.4
@@ -28,6 +29,7 @@ require (
 	github.com/spf13/cobra v0.0.5
 	github.com/spf13/pflag v1.0.5
 	golang.org/x/crypto v0.0.0-20200220183623-bac4c82f6975
+	google.golang.org/api v0.14.0
 	k8s.io/api v0.17.4
 	k8s.io/apiextensions-apiserver v0.17.4
 	k8s.io/apimachinery v0.17.4

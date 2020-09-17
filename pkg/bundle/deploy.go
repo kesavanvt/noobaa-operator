@@ -1803,6 +1803,26 @@ spec:
     namespace: CRED-SECRET-NAMESPACE
 `
 
+const Sha256_deploy_internal_cloud_creds_gcp_cr_yaml = "6872b8513d541ccf9b71b83df3a72b87aeccf45132ef654f5b925044a9cf5bfd"
+
+const File_deploy_internal_cloud_creds_gcp_cr_yaml = `apiVersion: cloudcredential.openshift.io/v1
+kind: CredentialsRequest
+metadata:
+  labels:
+    controller-tools.k8s.io: "1.0"
+  name: CRED-REQ-NAME
+  namespace: CRED-REQ-NAMESPACE
+spec:
+  secretRef:
+    name: CRED-SECRET-NAME
+    namespace: CRED-SECRET-NAMESPACE
+  providerSpec:
+    apiVersion: cloudcredential.openshift.io/v1
+    kind: GCPProviderSpec
+    predefinedRoles:
+    - roles/storage.admin
+    skipServiceCheck: true`
+
 const Sha256_deploy_internal_configmap_empty_yaml = "6405c531c6522ecd54808f5cb531c1001b9ad01a73917427c523a92be44f348f"
 
 const File_deploy_internal_configmap_empty_yaml = `apiVersion: v1
